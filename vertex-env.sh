@@ -11,4 +11,8 @@ sudo apt-get -y install openjdk-7-jdk
 cd /home/vagrant/
 wget -c http://dl.bintray.com/vertx/downloads/vert.x-2.1M3.zip vert.x.zip
 unzip vert.x-2.1M3.zip  
-echo "PATH=\"$PATH:/home/vagrant/vert.x-2.1M3/bin/\"" >> ~/.bashrc
+echo "PATH=\"$PATH:/home/vagrant/vert.x-2.1M3/bin/\"" >> /home/vagrant/.bashrc
+
+echo "scala=io.vertx~lang-scala~0.3.0:org.vertx.scala.platform.impl.ScalaVerticleFactory
+ .scala=scala" >> /home/vagrant/vert.x-2.1M3/conf/langs.properties
+
